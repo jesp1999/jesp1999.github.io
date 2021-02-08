@@ -52,12 +52,6 @@ header .profileHeader p {
 	line-height: 1.8;
 	overflow-y: auto;
 }
-header .socialNetworkNavBar {
-	text-align: center;
-	display: block;
-	margin-top: 60px;
-	clear: both;
-}
 header .externalResources img:hover {
 	opacity: 0.5;
 	transform: rotate(20deg);
@@ -147,7 +141,7 @@ header .externalResources img:hover {
 }
 .externalResourcesNav .externalResources a {
 	font-family: 'Montserrat', sans-serif;
-	color: rgba(20,20,20,1.00);
+	color: rgba(40,38,39,1.00);
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 18px;
