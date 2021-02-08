@@ -11,27 +11,16 @@ body {
 	padding-right: 2.275%;
 }
 
+a {
+	color: rgba(40,38,39,1.00);
+}
+
 /* Header */
 header {
 	text-align: center;
 	display: block;
 }
-header .profileLogo .logoPlaceholder {
-	background-color: rgba(208,207,207,1.00);
-	width: 187px;
-	text-align: center;
-}
-header .logoPlaceholder span {
-	width: 80px;
-	height: 22px;
-	font-family: 'Montserrat', sans-serif;
-	color: rgba(255,255,255,1.00);
-	font-size: 30px;
-	font-weight: 700;
-	line-height: 53px;
-}
 header .profilePhoto {
-	background-color: rgba(237,237,237,1.00);
 	width: 259px;
 	border-radius: 50%;
 	height: 259px;
@@ -40,14 +29,14 @@ header .profilePhoto {
 header .profileHeader h1 {
 	font-family: 'Montserrat', sans-serif;
 	color: rgba(146,146,146,1.00);
-	font-size: 30px;
+	font-size: 40px;
 	font-weight: 700;
 	line-height: 24px;
 }
 header .profileHeader h3 {
 	font-family: sans-serif;
 	color: rgba(146,146,146,1.00);
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: 700;
 	line-height: 24px;
 }
@@ -58,7 +47,7 @@ hr {
 header .profileHeader p {
 	font-family: sans-serif;
 	color: rgba(146,146,146,1.00);
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.8;
 	overflow-y: auto;
@@ -69,57 +58,70 @@ header .socialNetworkNavBar {
 	margin-top: 60px;
 	clear: both;
 }
-header .socialNetworkNavBar .socialNetworkNav {
-	border-radius: 50%;
-	cursor: pointer;
-}
-header .socialNetworkNavBar .socialNetworkNav img:hover {
+header .externalResources img:hover {
 	opacity: 0.5;
+	transform: rotate(20deg);
+	transition-duration: 0.5s;
 }
+
+
 /* Main Content sections */
-.mainContent .section1 {
+.mainContent .contactSection .projectSection {
 	display: block;
 }
-.section1 .sectionTitle, .section2 .sectionTitle {
+
+.projectSection .sectionTitle, .contactSection .sectionTitle {
 	font-family: 'Montserrat', sans-serif;
 	color: rgba(146,146,146,1.00);
 	font-size: 18px;
 	font-weight: 700;
 	text-transform: uppercase;
 }
-.section1 .sectionTitleRule, .section2 .sectionTitleRule {
+.projectSection .sectionTitleRule, .contactSection .sectionTitleRule {
 	margin: 0 3% 0 0;
 	float: left;
 	clear: both;
 }
-.section1 .sectionTitleRule2, .section2 .sectionTitleRule2 {
+.projectSection .sectionTitleRule2, .contactSection .sectionTitleRule2 {
 	background-color: rgba(208,207,207,1.00);
 	height: 1px;
 	padding: 0px;
 }
-.mainContent .section1 .section1Content {
+.mainContent .projectSection .projectSectionContent {
 	font-family: ProximaNova;
 	font-size: 14px;
 	font-weight: 100;
 	color: rgba(208,207,207,1.00);
 }
-.mainContent .section1 .section1Content span {
+.mainContent .projectSection .projectSectionContent span {
 	color: rgba(146,146,146,1.00);
 	font-family: sans-serif;
 }
-.section2 .sectionContentTitle {
+.mainContent .projectSection .projectSectionContent .projectName {
+	color: rgba(146,146,146,1.00);
+	font-size: 18px;
+	font-family: sans-serif;
+}
+
+.mainContent .contactSection .contactSectionContent {
+	font-family: ProximaNova;
+	font-size: 14px;
+	font-weight: 100;
+	color: rgba(208,207,207,1.00);
+}
+.contactSection .sectionContentTitle {
 	font-family: sans-serif;
 	color: rgba(146,146,146,1.00);
 	font-size: 18px;
 	font-weight: 700;
 }
-.section2 .sectionContentSubTitle {
+.contactSection .sectionContentSubTitle {
 	font-family: sans-serif;
 	color: rgba(68,67,67,1.00);
 	font-size: 14px;
 	font-weight: 400;
 }
-.section2 .sectionContent {
+.contactSection .sectionContent {
 	font-family: sans-serif;
 	color: rgba(146,146,146,1.00);
 	font-size: 14px;
@@ -129,24 +131,30 @@ header .socialNetworkNavBar .socialNetworkNav img:hover {
 .mainContent {
 	display: block;
 }
-.mainContent .externalResourcesNav .externalResources {
+.externalResourcesNav .externalResources {
 	background-color: rgba(208,207,207,1.00);
 	display: inline-block;
 	text-align: center;
 	margin-top: 0px;
 	padding-top: 3%;
 	cursor: pointer;
+	transition-duration: 0.5s;
 }
-.mainContent .externalResourcesNav .externalResources:hover {
+.externalResourcesNav .externalResources:hover {
 	background-color: rgba(153,153,153,1.00);
+	transition-duration: 0.5s;
+	transform: rotate(5deg);
 }
 .externalResourcesNav .externalResources a {
 	font-family: 'Montserrat', sans-serif;
-	color: rgba(255,255,255,1.00);
+	color: rgba(20,20,20,1.00);
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 18px;
 	text-decoration: none;
+}
+.externalResources {
+	border-radius: 12px;
 }
 .stretch {
 	content: '';
@@ -212,30 +220,30 @@ header .socialNetworkNavBar .socialNetworkNav {
 	margin-right: 23px;
 }
 /* Main content sections */
-.mainContent .section1 {
+.mainContent .projectSection {
 	text-align: center;
 	margin-bottom: 10%;
 }
-.section1 .section1Title, .section2 .section1Title {
+.projectSection .projectSectionTitle, .contactSection .projectSectionTitle {
 	text-align: center;
 }
-.section1 .sectionTitleRule, .section2 .sectionTitleRule {
+.projectSection .sectionTitleRule, .contactSection .sectionTitleRule {
 	width: 100%;
 }
-.section1 .sectionTitleRule2, .section2 .sectionTitleRule2 {
+.projectSection .sectionTitleRule2, .contactSection .sectionTitleRule2 {
 	display: none;
 }
-.mainContent .section1 .section1Content {
+.mainContent .projectSection .projectSectionContent {
 	display: inline-block;
 	text-align: left;
 	font-family: sans-serif;
 	text-align: justify;
 }
-.mainContent .section2 {
+.mainContent .contactSection {
 	display: block;
 	text-align: center;
 }
-.section2 .section2Content {
+.contactSection .contactSectionContent {
 	margin-top: 10%;
 	text-align: justify;
 	margin-bottom: 10%;
@@ -283,26 +291,26 @@ header .socialNetworkNavBar .socialNetworkNav {
 	margin-right: 23px;
 }
 /* Main content and sections */
-.section1 .section1Title, .section2 .section1Title {
+.projectSection .projectSectionTitle, .contactSection .projectSectionTitle {
 	text-align: center;
 }
-.section1 .sectionTitleRule, .section2 .sectionTitleRule {
+.projectSection .sectionTitleRule, .contactSection .sectionTitleRule {
 	width: 100%;
 }
-.section1 .sectionTitleRule2, .section2 .sectionTitleRule2 {
+.projectSection .sectionTitleRule2, .contactSection .sectionTitleRule2 {
 	display: none;
 }
-.mainContent .section1 .section1Content {
+.mainContent .projectSection .projectSectionContent {
 	display: block;
 	margin: 0% 0% 0% 20%;
 	font-family: sans-serif;
 	margin-top: 5%;
 	margin-bottom: 5%;
 }
-.mainContent .section2 {
+.mainContent .contactSection {
 	clear: both;
 }
-.section2 .section2Content {
+.contactSection .contactSectionContent {
 	padding: 0px;
 	margin-left: 20%;
 	font-family: sans-serif;
@@ -358,10 +366,10 @@ header .socialNetworkNavBar .socialNetworkNav {
 	margin-right: 23px;
 }
 /* Main content sections */
-.section1 .sectionTitleRule, .section2 .sectionTitleRule {
+.projectSection .sectionTitleRule, .contactSection .sectionTitleRule {
 	width: 22.5%;
 }
-.mainContent .section1 .section1Content {
+.mainContent .projectSection .projectSectionContent {
 	display: block;
 	margin-top: 0%;
 	margin-right: 0%;
@@ -369,10 +377,10 @@ header .socialNetworkNavBar .socialNetworkNav {
 	margin-bottom: 0%;
 	font-family: sans-serif;
 }
-.mainContent .section2 {
+.mainContent .contactSection {
 	clear: both;
 }
-.section2 .section2Content {
+.contactSection .contactSectionContent {
 	padding: 0px;
 	margin-left: 26%;
 	font-family: sans-serif;
