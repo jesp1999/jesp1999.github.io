@@ -199,9 +199,16 @@ input, textarea {
 
 :focus { outline-color: var(--orange-yellow-crayola); }
 
-html { font-family: var(--ff-poppins); }
+html {
+  font-family: var(--ff-poppins);
+  background: var(--smoky-black);
+}
 
-body { background: var(--smoky-black); }
+body {
+  background: var(--smoky-black);
+  min-height: 100vh;
+  display: flow-root; /* keeps main's top margin inside the body, so the black fills above it */
+}
 
 
 
@@ -345,8 +352,8 @@ article.active {
 \*-----------------------------------*/
 
 main {
-  margin: 15px 12px;
-  margin-bottom: 75px;
+  margin: 30px 12px;
+  margin-bottom: 95px; /* clears the fixed bottom navbar */
   min-width: 259px;
 }
 
@@ -1093,8 +1100,8 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   main {
-    margin-top: 60px;
-    margin-bottom: 100px;
+    margin-top: 90px;
+    margin-bottom: 120px;
   }
 
 
@@ -1366,7 +1373,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * MAIN 
    */
 
-  main { margin-bottom: 60px; }
+  main { margin-bottom: 90px; }
 
   .main-content {
     position: relative;
@@ -1436,6 +1443,12 @@ textarea.form-input::-webkit-resizer { display: none; }
    * RESET
    */
 
+  /* no rubber-band bounce: the sticky sidebar moved with it at the top of
+     the page but not at the bottom. Wide screens only, where the sidebar is
+     sticky, so phones keep pull-to-refresh. */
+  html,
+  body { overscroll-behavior-y: none; }
+
   body::-webkit-scrollbar { width: 20px; }
 
   body::-webkit-scrollbar-track { background: var(--smoky-black); }
@@ -1491,7 +1504,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar {
     position: sticky;
-    top: 60px;
+    top: 90px; /* matches main's top margin */
     grid-template-rows: auto 1fr;
     height: 100%;
     margin-bottom: 0;
@@ -1520,11 +1533,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .contacts-list { grid-template-columns: 1fr; }
 
-  .contact-info :is(.contact-link) {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+  .contact-info :is(.contact-link) { overflow-wrap: anywhere; }
 
   .contact-info :is(.contact-link, time, address) {
     --fs-7: 14px;
