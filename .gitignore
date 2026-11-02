@@ -1,1 +1,4 @@
 .idea/
+
+# files served by the web server but kept out of version control (e.g. résumé PDF)
+files/
