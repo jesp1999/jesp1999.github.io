@@ -15,7 +15,7 @@ Then open http://localhost:8000.
 
 ## Layout
 
-- `index.html` holds every page. The URL hash picks which one shows (`#about`, `#resume`, `#portfolio`, `#blog`, `#contact`).
+- `index.html` holds every page. The URL hash picks which one shows (`#about`, `#resume`, `#portfolio`, `#contact`).
 - `assets/` holds styles, scripts, fonts and images.
 - `files/` is gitignored. The web server serves it for downloads that live outside version control, such as the résumé PDF (`files/Julian-Espada-Resume.pdf`).
 
