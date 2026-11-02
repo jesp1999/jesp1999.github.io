@@ -2,6 +2,23 @@
 
 
 
+// warm the cache for lazy images on hidden pages once the first page has
+// loaded, so switching pages doesn't fetch and decode them mid-animation
+window.addEventListener("load", function () {
+  const warmImages = function () {
+    document.querySelectorAll('img[loading="lazy"]').forEach(function (img) {
+      new Image().src = img.src;
+    });
+  };
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(warmImages, { timeout: 3000 });
+  } else {
+    setTimeout(warmImages, 1500);
+  }
+});
+
+
+
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
