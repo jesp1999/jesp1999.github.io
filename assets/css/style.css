@@ -50,7 +50,7 @@
   );
   --text-gradient-yellow: linear-gradient(
     to right, 
-    hsl(45, 100%, 72%), 
+    hsl(45, 100%, 72%),
     hsl(35, 100%, 68%)
   );
 
@@ -838,6 +838,11 @@ main {
 
 .skills-list { padding: 20px; }
 
+.skills-list span {
+  color: var(--vegas-gold);
+  font-weight: var(--fw-400);
+  line-height: 1.6;
+}
 
 .skills-item:not(:last-child) { margin-bottom: 15px; }
 
