@@ -147,3 +147,35 @@ window.addEventListener("hashchange", function () {
 });
 
 if (location.hash) showPage(location.hash.slice(1));
+
+
+// portfolio screenshot lightbox
+const lightbox = document.querySelector("[data-lightbox]");
+const lightboxImg = document.querySelector("[data-lightbox-img]");
+const lightboxCaption = document.querySelector("[data-lightbox-caption]");
+
+if (lightbox && typeof lightbox.showModal === "function") {
+
+  document.querySelectorAll("[data-lightbox-trigger]").forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      const thumb = link.querySelector("img");
+      const title = link.querySelector(".project-title");
+      lightboxImg.src = link.href;
+      lightboxImg.alt = thumb ? thumb.alt : "";
+      lightboxCaption.textContent = title ? title.textContent : "";
+      lightbox.showModal();
+    });
+  });
+
+  document.querySelector("[data-lightbox-close]").addEventListener("click", function () { lightbox.close(); });
+
+  // clicking the dimmed area around the picture closes it (Esc is handled by <dialog>)
+  lightbox.addEventListener("click", function (event) {
+    if (event.target === lightbox) lightbox.close();
+  });
+
+  // drop the old picture so it doesn't flash when the next one opens
+  lightbox.addEventListener("close", function () { lightboxImg.removeAttribute("src"); });
+
+}

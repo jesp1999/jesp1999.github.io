@@ -76,6 +76,7 @@
   -->
   <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden">
     <symbol id="icon-book-outline" viewBox="0 0 512 512"><path d="M256 160c16-63.16 76.43-95.41 208-96a15.94 15.94 0 0116 16v288a16 16 0 01-16 16c-128 0-177.45 25.81-208 64-30.37-38-80-64-208-64-9.88 0-16-8.05-16-17.93V80a15.94 15.94 0 0116-16c131.57.59 192 32.84 208 96zM256 160v288" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M368 368L144 144M368 144L144 368"/></symbol>
     <symbol id="icon-chevron-down" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"/></symbol>
     <symbol id="icon-eye-outline" viewBox="0 0 512 512"><path d="M255.66 112c-77.94 0-157.89 45.11-220.83 135.33a16 16 0 00-.27 17.77C82.92 340.8 161.8 400 255.66 400c92.84 0 173.34-59.38 221.79-135.25a16.14 16.14 0 000-17.47C428.89 172.28 347.8 112 255.66 112z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><circle cx="256" cy="256" r="80" fill="none" stroke="currentColor" stroke-miterlimit="10"/></symbol>
     <symbol id="icon-location-outline" viewBox="0 0 512 512"><path d="M256 48c-79.5 0-144 61.39-144 137 0 87 96 224.87 131.25 272.49a15.77 15.77 0 0025.5 0C304 409.89 400 272.07 400 185c0-75.61-64.5-137-144-137z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><circle cx="256" cy="192" r="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -565,15 +566,11 @@
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web design</button>
+              <button data-filter-btn>Homelab</button>
             </li>
 
             <li class="filter-item">
               <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
             </li>
 
           </ul>
@@ -597,15 +594,11 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web design</button>
+                <button data-select-item>Homelab</button>
               </li>
 
               <li class="select-item">
                 <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
               </li>
 
             </ul>
@@ -614,164 +607,62 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+            <li class="project-item  active" data-filter-item data-category="homelab">
+              <a href="./assets/images/homelab-dashboard.webp" data-lightbox-trigger aria-label="Preview Homelab screenshot">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <svg class="ionicon" aria-hidden="true"><use href="#icon-eye-outline"></use></svg>
                   </div>
 
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy" decoding="async">
+                  <img src="./assets/images/homelab-dashboard-thumb.webp" alt="Homelab dashboard showing media and management services" width="800" height="642" loading="lazy" decoding="async">
                 </figure>
 
-                <h3 class="project-title">Finance</h3>
+                <h3 class="project-title">Homelab</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category">Homelab</p>
 
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <svg class="ionicon" aria-hidden="true"><use href="#icon-eye-outline"></use></svg>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy" decoding="async">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <svg class="ionicon" aria-hidden="true"><use href="#icon-eye-outline"></use></svg>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy" decoding="async">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
+                <p class="project-text">A single home server running about 85 Docker containers for media streaming, photo backup, monitoring, DNS, VPN, and backups, behind Nginx Proxy Manager and a Cloudflare tunnel.</p>
 
               </a>
             </li>
 
             <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
+              <a href="./assets/images/pipedream-dashboard.webp" data-lightbox-trigger aria-label="Preview Pipedream screenshot">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <svg class="ionicon" aria-hidden="true"><use href="#icon-eye-outline"></use></svg>
                   </div>
 
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy" decoding="async">
+                  <img src="./assets/images/pipedream-dashboard-thumb.webp" alt="Pipedream dashboard listing scheduled jobs and their status" width="800" height="642" loading="lazy" decoding="async">
                 </figure>
 
-                <h3 class="project-title">Brawlhalla</h3>
+                <h3 class="project-title">Pipedream</h3>
 
                 <p class="project-category">Applications</p>
 
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <svg class="ionicon" aria-hidden="true"><use href="#icon-eye-outline"></use></svg>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy" decoding="async">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <svg class="ionicon" aria-hidden="true"><use href="#icon-eye-outline"></use></svg>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy" decoding="async">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <svg class="ionicon" aria-hidden="true"><use href="#icon-eye-outline"></use></svg>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy" decoding="async">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
+                <p class="project-text">A job scheduler for my homelab: a Flask web interface on top of systemd timers that runs, monitors, and keeps reports for nearly 100 maintenance jobs, from backups to DNS syncs to security scans.</p>
 
               </a>
             </li>
 
             <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
+              <a href="./assets/images/jellyfin-wrapped.webp" data-lightbox-trigger aria-label="Preview Jellyfin Wrapped screenshot">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <svg class="ionicon" aria-hidden="true"><use href="#icon-eye-outline"></use></svg>
                   </div>
 
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy" decoding="async">
+                  <img src="./assets/images/jellyfin-wrapped-thumb.webp" alt="Jellyfin Wrapped year-in-review screen showing top movie and top show" width="800" height="640" loading="lazy" decoding="async">
                 </figure>
 
-                <h3 class="project-title">Task Manager</h3>
+                <h3 class="project-title">Jellyfin Wrapped</h3>
 
                 <p class="project-category">Applications</p>
 
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <svg class="ionicon" aria-hidden="true"><use href="#icon-eye-outline"></use></svg>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy" decoding="async">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
+                <p class="project-text">My fork of an unmaintained project that brings a Spotify Wrapped-style year in review to Jellyfin's movies, shows, and music.</p>
 
               </a>
             </li>
@@ -823,6 +714,23 @@
     </div>
 
   </main>
+
+
+  <!--
+    - #LIGHTBOX (portfolio screenshot preview)
+  -->
+
+  <dialog class="lightbox" aria-label="Screenshot preview" data-lightbox>
+
+    <button class="lightbox-close" aria-label="Close preview" data-lightbox-close>
+      <svg class="ionicon" aria-hidden="true"><use href="#icon-close"></use></svg>
+    </button>
+
+    <img class="lightbox-img" alt="" data-lightbox-img>
+
+    <p class="lightbox-caption" data-lightbox-caption></p>
+
+  </dialog>
 
 
 
