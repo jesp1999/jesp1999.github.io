@@ -1,44 +1,30 @@
-# vCard - Personal portfolio
+# julianespada.com
 
-![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
-![GitHub stars](https://img.shields.io/github/stars/codewithsadee/vcard-personal-portfolio?style=social)
-![GitHub forks](https://img.shields.io/github/forks/codewithsadee/vcard-personal-portfolio?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-[![YouTube Video Views](https://img.shields.io/youtube/views/SoxmIlgf2zM?style=social)](https://youtu.be/SoxmIlgf2zM)
+Personal site and résumé for Julian Espada, Lead Software Engineer.
 
-vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
+A static site (plain HTML, CSS and JavaScript, no build step), based on the
+[vCard](https://github.com/codewithsadee/vcard-personal-portfolio) template by codewithsadee.
 
-## Demo
-
-![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
-![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
-
-## Prerequisites
-
-Before you begin, ensure you have met the following requirements:
-
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
-
-## Installing vCard
-
-To install **vCard**, follow these steps:
-
-Linux and macOS:
+## Run locally
 
 ```bash
-sudo git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
+python3 -m http.server 8000
 ```
 
-Windows:
+Then open http://localhost:8000.
 
-```bash
-git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
+## Layout
 
-## Contact
-
-If you want to contact me you can reach me at [Twitter](https://www.x.com/codewithsadee_).
+- `index.html` holds every page. The URL hash picks which one shows (`#about`, `#resume`, `#portfolio`, `#contact`).
+- `assets/` holds styles, scripts, fonts and images.
+- `files/` is gitignored. The web server serves it for downloads that live outside version control, such as the résumé PDF (`files/Julian-Espada-Resume.pdf`).
 
 ## License
 
-MIT
+Copyright (C) 2025 Julian Espada.
+
+The site code is licensed under the GNU General Public License, version 2 only; see [LICENSE](LICENSE).
+
+Parts of the code come from the vCard template and remain available under their original MIT license, which is kept in [LICENSE-vcard-template](LICENSE-vcard-template). The inline icons come from [Ionicons](https://ionic.io/ionicons) (MIT) and [Simple Icons](https://simpleicons.org) (CC0). The Poppins font files are under the SIL Open Font License.
+
+The personal content (biography, résumé details and images of Julian Espada) isn't covered by these licenses.
